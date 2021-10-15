@@ -1,0 +1,254 @@
+
+*** Running vivado
+    with args -log LED_with_RAM.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source LED_with_RAM.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source LED_with_RAM.tcl -notrace
+Command: synth_design -top LED_with_RAM -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8920
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'LED_with_RAM' [C:/Users/recep/Desktop/LED_RAM.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sn_bekleme' [C:/Users/recep/Desktop/sn_bekleme.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'sn_bekleme' (1#1) [C:/Users/recep/Desktop/sn_bekleme.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Debouncer' [C:/Users/recep/Desktop/Debouncer.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/recep/Desktop/Debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Debouncer' (2#1) [C:/Users/recep/Desktop/Debouncer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'LED_with_RAM' (3#1) [C:/Users/recep/Desktop/LED_RAM.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1024.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1024.746 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1024.746 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/recep/LED_with_RAM/LED_with_RAM.srcs/constrs_1/new/LED_RAM.xdc]
+Finished Parsing XDC File [C:/Users/recep/LED_with_RAM/LED_with_RAM.srcs/constrs_1/new/LED_RAM.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/recep/LED_with_RAM/LED_with_RAM.srcs/constrs_1/new/LED_RAM.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/LED_with_RAM_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/LED_with_RAM_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1029.418 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1029.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1029.418 ; gain = 4.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1029.418 ; gain = 4.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1029.418 ; gain = 4.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Debouncer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                               00
+                 iSTATE0 |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Debouncer'
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[15]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[14]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[13]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[12]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[11]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[10]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[9]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[8]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[7]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[6]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[5]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[4]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[3]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[2]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[1]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[0]' [C:/Users/recep/Desktop/LED_RAM.v:80]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1029.418 ; gain = 4.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 28    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1029.418 ; gain = 4.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1029.418 ; gain = 4.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1037.793 ; gain = 13.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1038.496 ; gain = 13.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |     1|
+|4     |LUT2   |     1|
+|5     |LUT3   |     4|
+|6     |LUT4   |    23|
+|7     |LUT5   |    30|
+|8     |LUT6   |    39|
+|9     |MUXF7  |    16|
+|10    |MUXF8  |     8|
+|11    |FDRE   |   160|
+|12    |LD     |   128|
+|13    |IBUF   |    12|
+|14    |OBUF   |     8|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 1045.328 ; gain = 15.910
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1045.328 ; gain = 20.582
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1055.848 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1057.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 128 instances were transformed.
+  LD => LDCE: 128 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1057.840 ; gain = 33.094
+INFO: [Common 17-1381] The checkpoint 'C:/Users/recep/LED_with_RAM/LED_with_RAM.runs/synth_1/LED_with_RAM.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file LED_with_RAM_utilization_synth.rpt -pb LED_with_RAM_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 10 15:41:13 2021...
